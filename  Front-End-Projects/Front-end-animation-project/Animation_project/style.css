@@ -1,0 +1,91 @@
+.container{
+    height: 100vh;
+    /* width: 100vw; */
+    background: url('../png.img/bg.png');
+    /* background-position: 50px 0; */
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
+    position: relative;
+    animation: bgmove 6s forwards ;
+
+
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.rocket{
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    animation: rocketmove 2s ease-in-out infinite,
+               astroandrocket 2s ease-in-out 9s forwards,
+               rocketlaunch 2s ease-in-out 10s forwards;
+
+    
+}
+.rocket-img{
+
+    height: 150%;
+    transform: rotate(45deg);   
+}
+.astro{
+    height: 110px;
+    position: relative;
+    top: 450px;
+    left: -120px;
+    animation: astrostanding 2s ease-in-out infinite ,
+               astromoveforward 4s ease-in-out 5s forwards,
+               astroinrocket 2s ease-in-out 8s forwards;
+               /* we give delay in astromoveforward */
+}
+@keyframes rocketmove{
+    0%{
+        top: 50%;
+    }
+    50%{
+        top: 45%;
+    }
+    100%{
+        top: 50%;
+    }
+}
+@keyframes bgmove{
+   
+    100%{
+        background-position: 100% 0;
+
+    }
+}
+@keyframes astrostanding{
+    50%{
+        top: 380px;
+    }
+}
+@keyframes astromoveforward{
+    form{
+        left: -120px;
+    }
+    to{
+        left: 460px;
+    }
+}
+@keyframes astroinrocket{
+    100%{
+        
+        left: 660px;
+        transform: scale(0);
+    }
+}
+@keyframes astroandrocket{
+    100%{
+        transform: rotate(-90deg);
+       
+    }
+}
+@keyframes rocketlaunch{
+    100%{
+        top: -100%;
+    }
+}
