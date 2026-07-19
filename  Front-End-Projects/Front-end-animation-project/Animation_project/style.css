@@ -5,6 +5,7 @@
     /* background-position: 50px 0; */
     /* background-repeat: no-repeat; */
     /* background-size: contain; */
+    /* background-size: cover; */
     position: relative;
     animation: bgmove 6s forwards ;
 
